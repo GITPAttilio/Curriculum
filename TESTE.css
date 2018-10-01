@@ -1,0 +1,75 @@
+﻿body{
+	margin: 0px;
+	font-family: Arial;
+	font-size: 12px;
+}
+
+.topo{
+	width: 100%;
+	max-width: 1080px;
+	height: 60px;
+	margin: auto;
+
+}
+
+.foto{
+	width: 93%;
+	height: 80px;
+	display: inline-block;
+	
+}
+
+.menu{
+width: 7%;
+height: 80px;
+float: right;
+
+margin-top: 0px;
+
+}
+
+
+
+.corpo{
+	width: 100%;
+    max-width: 1040px;
+    margin: auto;
+}
+
+img{
+	max-width: 100%;
+	height:auto;
+}
+
+.container{
+	width: 75%;
+	margin: 100px auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr; /*divide em espaços iguais que tem em uma div*/
+	grid-template-rows: auto;
+	grid-template-areas: "esq dir";
+	background-color: white;
+}
+
+.conhecimento-esq{
+	grid-area: esq;
+	padding: 20px;
+}
+
+.conhecimento-dir{
+	grid-area: dir;
+	position: relative;
+	overflow: hidden;
+}
+
+.conhecimento-dir::after{
+	content: "";
+	position: absolute;
+	width: 60px;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: white;
+	transform:skewX(-10deg);
+	transform-origin: top left;
+}
